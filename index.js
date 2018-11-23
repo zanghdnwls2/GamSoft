@@ -13,6 +13,17 @@ function goGoogle(e){
 }
 
 $(function(){
+	initDown();
+	function initDown(){
+		$.ajax({
+			url:"DownloadSum.txt",
+			dataType:"text",
+			success:function(e){
+				alert(e);
+			}
+		});
+	}
+
 	function openMenu(){
 		$("#btnMenuText").html("닫기");
 		$("#menuIcon-m").hide();
