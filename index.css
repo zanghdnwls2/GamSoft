@@ -1,0 +1,137 @@
+
+html{
+	min-width: 50px;
+	user-select: none;
+}
+*{
+	padding: 0;
+	margin: 0;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Noto Sans KR', sans-serif;
+}
+.fixed-bar{
+	position: fixed;left:50%;
+	transform: translateX(-50%);
+	z-index: 9999;
+}
+#main{
+	background-color: white;
+}
+.title{
+	font-size: 30px;
+}
+.menu-icon{
+	width: 50px;
+	position: relative;
+	top: 3px;
+	left: 5px;
+	height: auto;	
+}
+
+.download-btn{
+	height:50px;
+	width: 80%;
+	line-height: 50px;
+	background-color: #EEEEEE;
+	border:1px solid #BBBBBB;
+	border-radius: 5px;
+	cursor: pointer;
+	transition-duration: 0.1s;
+	transform: scale(1);
+}
+
+.download-btn:hover{
+	background-color: #DDDDDD;
+	transition-duration: 0.1s;
+	transform: scale(1.02);
+}
+
+.menu-icon-text{
+	margin:0px 15px 0px 0px;
+	position: relative;
+	top: -16px;
+	font-weight: bold;
+}
+
+.menu-icon-area{
+	float:left;
+	border-right: 1px solid #EAEAEA;
+	padding-right: 5px;
+}
+
+.menu-icon-area:hover{
+	cursor: pointer;
+}
+
+.logo-name{
+	position: relative;
+	left: -54px;
+	line-height: 50px;
+	font-size: 30px;
+	font-weight: bold;
+}
+#slide-menu{
+	position: fixed;
+	z-index: 999;
+	background-color: #FFF;
+	width:200px;
+	height: 100%;
+	left:-200px;
+	top: 55px;
+}
+
+#slide-menu ul{
+	margin: 0;
+	padding: 0;
+}
+
+#slide-menu ul li{
+	padding: 20px 0;
+	text-align: center;
+	border-bottom: 1px solid black;
+	cursor: pointer;
+}
+
+#slide-menu ul li:hover{
+	background-color: #EEE;
+}
+
+#slide-menu ul li a{
+	text-decoration: none;
+	font-weight: bold;
+	color: black;
+}
+
+#overlay{
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: 0.3;
+	filter: alpha(opacity=30);
+	z-index: 998;
+}
+
+.footer{
+	border-top: 1px solid gray;
+	margin-top:30px;
+}
+
+@media only screen and (max-width: 700px){
+	.menu-icon-text{
+		display: none;
+	}
+	.logo-name{
+		position: relative;
+		left: -29px;
+		line-height: 50px;
+		font-size: 30px;
+		font-weight: bold;
+	}
+	.menu-icon{
+		margin-right: 3px;
+	}
+}
