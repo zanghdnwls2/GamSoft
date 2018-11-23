@@ -14,7 +14,16 @@
 	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 	<script src="index.js"></script>
 	<script>
-		alert("asd");
+		$(function(){
+			$.ajax({
+				url:"https://github.com/zanghdnwls2/GamSoft/blob/master/DownloadSum.txt",
+				type:"get",
+				dataType:"txt",
+				success:function(e){
+					alert(e);
+				}
+			})
+		});
 	</script>
 
 
