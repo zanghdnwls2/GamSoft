@@ -17,7 +17,8 @@ $(function(){
 	alert("asd");
 	function initDown(){
 		$.ajax({
-			url:"DownloadSum.txt",
+			url:"https://github.com/zanghdnwls2/GamSoft/blob/master/DownloadSum.txt",
+			type:"get",
 			dataType:"text",
 			success:function(e){
 				alert(e);
