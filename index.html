@@ -17,7 +17,8 @@
 		$(function(){
 			$.ajax({
 				url:"DownloadSum.txt",
-				dataType:"txt",
+				crossOrigin:"true",
+				dataType:"json",
 				success:function(e){
 					alert(e);
 				}
