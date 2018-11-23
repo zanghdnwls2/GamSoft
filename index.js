@@ -14,6 +14,7 @@ function goGoogle(e){
 
 $(function(){
 	initDown();
+	alert("asd");
 	function initDown(){
 		$.ajax({
 			url:"DownloadSum.txt",
