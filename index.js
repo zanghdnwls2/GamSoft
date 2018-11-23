@@ -13,19 +13,6 @@ function goGoogle(e){
 }
 
 $(function(){
-	initDown();
-	alert("asd");
-	function initDown(){
-		$.ajax({
-			url:"https://github.com/zanghdnwls2/GamSoft/blob/master/DownloadSum.txt",
-			type:"get",
-			dataType:"text",
-			success:function(e){
-				alert(e);
-			}
-		});
-	}
-
 	function openMenu(){
 		$("#btnMenuText").html("닫기");
 		$("#menuIcon-m").hide();
