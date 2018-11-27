@@ -12,7 +12,42 @@ function goGoogle(e){
 	}
 }
 
+window.onload = function(){
+	setTimeout(function(){
+		scrollTo(0,0);
+	},100);
+}
+
 $(function(){
+
+	$("#homeBtn").click(function(){
+		load('home');
+	});
+
+	$("#slide-menu ul li").click(function(){
+		var id = $(this).attr('id');
+		
+		switch(id){
+			case 'sideMenuBtn1':
+			load('program');
+			break;
+			case 'sideMenuBtn2':
+			load('portfolio');
+			break;
+			case 'sideMenuBtn3':
+			load('none');
+			break;
+			case 'sideMenuBtn4':
+			load('none');
+			break;
+			case 'sideMenuBtn5':
+			load('none');
+			break;
+		}
+
+
+	});
+
 	function openMenu(){
 		$("#btnMenuText").html("닫기");
 		$("#menuIcon-m").hide();
