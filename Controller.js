@@ -2,7 +2,7 @@ function load(path){
 	switch(path){
 		case "home":
 		case "program":
-			location.href="index.html";
+			location.href="https://gamsoft.ga/";
 			break;
 		case "portfolio":
 			location.href="portfolio.html";
