@@ -1,81 +1,157 @@
 ﻿<!DOCTYPE html>
 <html>
-<head>
-	<meta property="og:title" content="GSoft 프로그램 다운받기">
-	<meta property="og:description" content="GSoft 프로그램 다운받기 Desk App...Gam App">
-	<meta property="og:image" content="http://drive.google.com/uc?export=view&id=1kkdAsy-Qxbj1T86bU6RfdSGn2E4McQZI">
-	
-	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+  <head>
+    <meta property="og:title" content="GSoft 프로그램 다운받기" />
+    <meta
+      property="og:description"
+      content="GSoft 프로그램 다운받기 Desk App...Gam App"
+    />
+    <meta
+      property="og:image"
+      content="http://drive.google.com/uc?export=view&id=1kkdAsy-Qxbj1T86bU6RfdSGn2E4McQZI"
+    />
 
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"
+    />
 
-	<link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto" rel="stylesheet">
-	<link href="index.css" rel="stylesheet">
-	<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-	<script src="index.js"></script>
-	<script src="Controller.js"></script>
-	<script>
-		
-	</script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Noto+Sans+KR|Roboto"
+      rel="stylesheet"
+    />
+    <link href="index.css" rel="stylesheet" />
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="index.js"></script>
+    <script src="Controller.js"></script>
+    <script></script>
 
+    <title>GSoft</title>
+  </head>
 
-	<title>GSoft</title>
-</head>
-<body>
-	<div id="main" align="center">
-		<div id="overlay"></div>
-		<div id="slide-menu">
-			<ul>
-				<li id="sideMenuBtn1"><a href="javascript:void(0);">프로그램</a></li>
-				<li id="sideMenuBtn2"><a href="javascript:void(0);">포트폴리오</a></li>
-				<li id="sideMenuBtn3"><a href="javascript:void(0);">Menu</a></li>
-				<li id="sideMenuBtn4"><a href="javascript:void(0);">Menu</a></li>
-				<li id="sideMenuBtn5"><a href="javascript:void(0);">Menu</a></li>
-			</ul>
-		</div>
-		<div class="fixed-bar" align="center" style="top: 0px; width: 100%; background-color: white; border-bottom: 1px solid #EAEAEA" >
-			<div id="btnMenu" class="menu-icon-area">
-				<img id="menuIcon-m" class="menu-icon" style="" src="Image/menu.png" alt="메뉴"/>
+  <body>
+    <div id="main" align="center">
+      <div id="overlay"></div>
+      <div id="slide-menu">
+        <ul>
+          <li v-for="item in items" :id="item.ids">
+            <a href="javascript:void(0);">{{item.text}}</a>
+          </li>
+        </ul>
+      </div>
+      <script>
+        var slideMenu = new Vue({
+          el: "#slide-menu",
+          data: {
+            items: [
+              { text: "프로그램", ids: "sideMenuBtn1" },
+              { text: "포트폴리오", ids: "sideMenuBtn2" }
+            ]
+          }
+        });
+      </script>
+      <div
+        class="fixed-bar"
+        align="center"
+        style="top: 0px; width: 100%; background-color: white; border-bottom: 1px solid #EAEAEA"
+      >
+        <div id="btnMenu" class="menu-icon-area">
+          <img
+            id="menuIcon-m"
+            class="menu-icon"
+            style=""
+            src="Image/menu.png"
+            alt="메뉴"
+          />
 
-				<img id="menuIcon-q" class="menu-icon" style="display: none;" src="Image/close.png" alt="메뉴"/>
-				<span id="btnMenuText" class="menu-icon-text">메뉴</span>
-			</div>
-			<span class="logo-name">
-				<span id="homeBtn" style="cursor: pointer;">GSoft</span>
-			</span>
-			
-		</div><br><br><br>
+          <img
+            id="menuIcon-q"
+            class="menu-icon"
+            style="display: none;"
+            src="Image/close.png"
+            alt="메뉴"
+          />
+          <span id="btnMenuText" class="menu-icon-text">메뉴</span>
+        </div>
+        <span class="logo-name">
+          <span id="homeBtn" style="cursor: pointer;">GSoft</span>
+        </span>
+      </div>
+      <br /><br /><br />
 
+      <div class="pgm-item" data-index="1">
+        <span class="title"
+          ><b>PC) Desk App</b><br />
+          <img
+            src="Image/DeskApp Img.png"
+            style="width:100%; height: auto; display: block; margin-left: auto; margin-right: auto; max-width: 1000px"
+            alt="이미지"
+          />
+        </span>
+        <div
+          id="dw1"
+          class="download-btn"
+          style="max-width: 600px;"
+          data-type="pc"
+          data-link="Data/DeskApp - Release.zip"
+          ;
+          onclick="goGoogle(this);"
+        >
+          다운로드
+        </div>
+        <span class="description"
+          >여러 프로그램을 등록해서 빠르게 사용해보세요.</span
+        >
+	  </div>
+	  
+	  <script>
+	  </script>
 
-		<div class="pgm-item" data-index="1">
-			<span class="title"><b>PC) Desk App</b><br>
-				<img src='Image/DeskApp Img.png' style="width:100%; height: auto; display: block; margin-left: auto; margin-right: auto; max-width: 1000px" alt="이미지" />
-			</span>
-			<div id="dw1" class="download-btn" style="max-width: 600px;" data-type="pc" data-link="Data/DeskApp - Release.zip"; onclick="goGoogle(this);" >다운로드</div>
-			<span class="description">여러 프로그램을 등록해서 빠르게 사용해보세요.</span>
-		</div>
+      <hr
+        style="margin: 50px 0px 50px 0px; width: 80%; max-width: 700px;"
+        noshade
+        color="gray"
+      />
 
+      <div class="pgm-item" data-index="2">
+        <span class="title"
+          ><b>PC) Gam App</b><br /><br />
+          <img
+            src="Image/GamApp.png"
+            style="width:100%; height: auto; display: block; margin-left: auto; margin-right: auto; max-width: 400px"
+            alt="이미지"
+          /> </span
+        ><br />
+        <div
+          id="dw2"
+          class="download-btn"
+          style="max-width: 600px;"
+          data-type="pc"
+          data-link="Data/GamApp - Release.zip"
+          ;
+          onclick="goGoogle(this);"
+        >
+          다운로드
+        </div>
+        <span class="description"
+          >여러 프로그램을 등록해서 빠르게 사용해보세요.</span
+        >
+      </div>
+      <hr
+        style="margin: 50px 0px 50px 0px; width: 80%; max-width: 700px;"
+        noshade
+        color="gray"
+      />
 
+      <div class="pgm-item" data-index="3"></div>
+    </div>
 
-		<hr style="margin: 50px 0px 50px 0px; width: 80%; max-width: 700px;" noshade color="gray">
-
-
-		<div class="pgm-item" data-index="2">
-			<span class="title"><b>PC) Gam App</b><br><br>
-				<img src='Image/GamApp.png' style="width:100%; height: auto; display: block; margin-left: auto; margin-right: auto; max-width: 400px" alt="이미지" />
-			</span><br>
-			<div id="dw2" class="download-btn" style="max-width: 600px;" data-type="pc" data-link="Data/GamApp - Release.zip"; onclick="goGoogle(this);" >다운로드</div>
-			<span class="description">여러 프로그램을 등록해서 빠르게 사용해보세요.</span>
-		</div>
-		<hr style="margin: 50px 0px 50px 0px; width: 80%; max-width: 700px;" noshade color="gray">
-
-
-
-		<div class="pgm-item" data-index="3">
-			
-		</div>
-	</div>
-
-	<div class="footer" align="center" style="bottom: 0px; width: 100%; background-color: white" >ⓒ GSoft Corp.</div>
-</body>
+    <div
+      class="footer"
+      align="center"
+      style="bottom: 0px; width: 100%; background-color: white"
+    >
+      ⓒ GSoft Corp.
+    </div>
+  </body>
 </html>
-
