@@ -1,7 +1,3 @@
-document.write(
-  "<script src='https://cdn.jsdelivr.net/npm/vue/dist/vue.js'></script>"
-);
-
 function load(path) {
   switch (path) {
     case "home":
